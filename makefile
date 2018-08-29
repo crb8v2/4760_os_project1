@@ -1,9 +1,7 @@
-# 	Rules go here and MUST HAVE A TAB
-# 	Rules go here and MUST HAVE A TAB
-# 	Rules go here and MUST HAVE A TAB
+# comment
 
 CC = gcc
-CFLAGS = -Wall -ansi
+CFLAGS = -Wall
 LIBS =
 SRC = main.h
 TARGET = ass1
