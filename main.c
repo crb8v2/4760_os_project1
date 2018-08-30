@@ -1,15 +1,12 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 3378bced2841dd63b5922412d85227cd52a306bb
 
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h> // for perror
-<<<<<<< HEAD
+
 #include <stdlib.h>
 #include <string.h>
+
+#include <sys/wait.h>
 
 int main (int argc, char *argv[]) {
 
@@ -40,15 +37,18 @@ int main (int argc, char *argv[]) {
 
         wait(NULL);
 
-        fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n", counter1,
-                (long) getpid(), (long) getppid(), (long) childpid);
-        
+//        fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n", counter1,
+//                (long) getpid(), (long) getppid(), (long) childpid);
+
+        fprintf(stderr, "i:%d ", counter1);
+        fprintf(stderr, "process ID:%ld ", (long)getpid());
+        fprintf(stderr, "parent ID:%ld ", (long)getppid());
+        fprintf(stderr,"child ID:%ld\n", (long)childpid);
+
         sleep(m);
     }
 
-=======
-
-int main (void) {
+//int main (void) {
 
 //    // gets pid and ppid
 //    printf("process id: %ld\n", (long)getpid());
@@ -77,25 +77,22 @@ int main (void) {
 //     // how does everything from here up work TOGETHER???
 
      //ex 3.7
-     pid_t childpid;
-     pid_t mypid;
-
-     mypid = getpid();
-     childpid = fork();
-
-     if(childpid == -1) {
-         perror("Fork Failed.");
-         return 1;
-     }
-     if(childpid == 0)
-         printf("child: %ld, ID = %ld\n", (long)getpid(), (long)mypid);
-     else
-         printf("parent: %ld, ID = %ld\n", (long)getpid(), (long)mypid);
-
-
-     
->>>>>>> 3378bced2841dd63b5922412d85227cd52a306bb
-    return 0;
+//     pid_t childpid;
+//     pid_t mypid;
+//
+//     mypid = getpid();
+//     childpid = fork();
+//
+//     if(childpid == -1) {
+//         perror("Fork Failed.");
+//         return 1;
+//     }
+//     if(childpid == 0)
+//         printf("child: %ld, ID = %ld\n", (long)getpid(), (long)mypid);
+//     else
+//         printf("parent: %ld, ID = %ld\n", (long)getpid(), (long)mypid);
+//
+//    return 0;
 }
 
 
