@@ -35,12 +35,10 @@ int main (int argc, char *argv[]) {
 
     for (counter2 = 0; counter2 < k; counter2++) {
 
-        wait(NULL);
-
 //        fprintf(stderr, "i:%d process ID:%ld parent ID:%ld child ID:%ld\n", counter1,
 //                (long) getpid(), (long) getppid(), (long) childpid);
 
-        fprintf(stderr, "i:%d ", counter1);
+        fprintf(stderr, "i:%d", counter1);
         fprintf(stderr, "process ID:%ld ", (long)getpid());
         fprintf(stderr, "parent ID:%ld ", (long)getppid());
         fprintf(stderr,"child ID:%ld\n", (long)childpid);
